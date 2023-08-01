@@ -1,0 +1,11 @@
+select LOWER('SQL Course') from dual;
+select CONCAT('Hello','world') from dual;
+select SUBSTR('Hello',1,3) from dual;
+select employee_id, CONCAT(first_name,last_name) NAME,job_id, LENGTH(last_name) INSTR(last_name,'a') "Contains a?" 
+from employees where SUBSTR(job_id,4)='REP'; 
+select ROUND(45.923,2), ROUND(45.923,0), ROUND(45.923,-1) from dual;
+select sysdate from dual;
+describe employees;
+select last_name, (sysdate-hire_date) AS day,ROUND(((sysdate-hire_date)/365),0) AS year,ROUND(((sysdate-hire_date)/30)-((((sysdate-hire_date)/365)*12)+(MOD((sysdate-hire_date),365)/30)),0)) AS month,ROUND((sysdate-hire_date)-((year*365)+(((MOD((sysdate-hire_date),365)/30)*30),0) from employees;
+select last_name, (sysdate-hire_date) AS day,ROUND(((sysdate-hire_date)/365),0) AS year,ROUND(((sysdate-hire_date)/30)-((((sysdate-hire_date)/365)*12)+(MOD((sysdate-hire_date),365)/30)),0)) AS month,ROUND((sysdate-hire_date)-((year*365)+(((MOD((sysdate-hire_date),365)/30)*30),0) FROM employees;
+select ROUND((sysdate-hire_date)/365,0) year, ROUND(((sysdate-hire_date)/30)-((ROUND((sysdate-hire_date)/365,0)*12)+(MOD((sysdate-hire_date),365)/30)),0) AS month, ((sysdate-hire_date)-( ROUND(((ROUND((sysdate-hire_date)/365,0)*12)+(MOD((sysdate-hire_date),365)/30)),0)*30)) from employees;
