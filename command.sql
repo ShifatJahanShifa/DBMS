@@ -1,3 +1,4 @@
+-- commands until i went to uni
 select * from tab;
 describe departments;
 select * from departments;
