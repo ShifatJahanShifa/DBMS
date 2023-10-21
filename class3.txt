@@ -6,6 +6,4 @@ from employees where SUBSTR(job_id,4)='REP';
 select ROUND(45.923,2), ROUND(45.923,0), ROUND(45.923,-1) from dual;
 select sysdate from dual;
 describe employees;
-select last_name, (sysdate-hire_date) AS day,ROUND(((sysdate-hire_date)/365),0) AS year,ROUND(((sysdate-hire_date)/30)-((((sysdate-hire_date)/365)*12)+(MOD((sysdate-hire_date),365)/30)),0)) AS month,ROUND((sysdate-hire_date)-((year*365)+(((MOD((sysdate-hire_date),365)/30)*30),0) from employees;
-select last_name, (sysdate-hire_date) AS day,ROUND(((sysdate-hire_date)/365),0) AS year,ROUND(((sysdate-hire_date)/30)-((((sysdate-hire_date)/365)*12)+(MOD((sysdate-hire_date),365)/30)),0)) AS month,ROUND((sysdate-hire_date)-((year*365)+(((MOD((sysdate-hire_date),365)/30)*30),0) FROM employees;
-select ROUND((sysdate-hire_date)/365,0) year, ROUND(((sysdate-hire_date)/30)-((ROUND((sysdate-hire_date)/365,0)*12)+(MOD((sysdate-hire_date),365)/30)),0) AS month, ((sysdate-hire_date)-( ROUND(((ROUND((sysdate-hire_date)/365,0)*12)+(MOD((sysdate-hire_date),365)/30)),0)*30)) from employees;
+select (sysdate-hire_date) "days", trunc(((sysdate-hire_date)/365),0) "years", trunc(mod((sysdate-hire_date),365)/30,0) "months", trunc(mod(mod((sysdate-hire_date),365),30),0) "day" from employees;

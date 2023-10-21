@@ -1,0 +1,29 @@
+join query: 
+(cross product+ some condition) == table size (m*n)
+
+find which tables i need to use;
+when i need to fetch data from two or more tables;
+there must be common attributes in these tables;
+
+select employee_name from employees,departments where employees.employee_id=departments.employee_id;
+select employee_name from employees natural join department;
+select employee_name from employees (e) join departments (d) on employees.employee_id=departments.employee_id;
+
+-- join and natural join or inner join is same.
+
+-- join is used after from clause. if i use equality instead of join, then i use it in where clause such as; where t1.col1=t2.col3;
+
+* Natural join: If the tables COUNTRIES and CITIES have two common columns named COUNTRY and COUNTRY_ISO_CODE,
+select * from countries natural join cities;
+
+*** how to visualize when natural join performs on two common columns???
+
+first- command ( i did )      // done 
+second- second day te ami silm, ki ki dicilo mone nai. porse mone, chapter 2 er kisu syntax porayse plus kisu query disilo   //done
+third- chapter 2 er baki part ta porayse but ami pari nai oidin   //done
+forth- sql query r slide, ja ami pari nai kisui  // motamoti done
+fifth- table creation    // done
+sixth- procedure
+seventh- function
+eighth- anonymous procedure plus condition and loop
+ninth- cursor
