@@ -1,3 +1,0 @@
-select a.employee_id,department_name,b.department_id from employees a,departments b;
-select a.employee_id,department_name,b.department_id from employees a,departments b where b.job_id="ST_CLERK";
-select * from employees INNER JOIN departments ON employees.department_id=departments.department_id;

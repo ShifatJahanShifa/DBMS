@@ -43,7 +43,7 @@ insert into account values ('A-305','Round Hill','350');
 
 insert into depositor values ('Hayes','A-102');
 insert into depositor values ('Johnson','A-101');
-insert into depositor values ('johnson','A-201');
+insert into depositor values ('Johnson','A-201');
 insert into depositor values ('Jones','A-217');
 insert into depositor values ('Lindsay','A-222');
 insert into depositor values ('Smith','A-215');
